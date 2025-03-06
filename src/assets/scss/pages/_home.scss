@@ -1,0 +1,254 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* ======== */
+/* Home CSS */
+/* ======== */
+
+
+section{
+    &.section-h-1{
+        .grid{
+            gap: rem(32);
+           &:nth-child(1){
+                gap:rem(56);
+                .flex{                
+                    &:nth-child(1){
+                        gap: rem(16);
+                        h1{
+                            font-size: ss-var($body-fonts, xxl, size);
+                            font-weight: ss-var($body-fonts, base-md, weight);
+                            color: ss-var($colors, neutral, "neutral100");
+                        }
+                        h2{
+                            font-family: "Inter";
+                            font-weight: ss-var($body-fonts, xl, weight);
+
+                            color: ss-var($colors, neutral, "neutral100");
+                
+                        }
+                        span{
+                            color: ss-var($colors, neutral, "neutral40");
+                        }
+                    }
+
+                }
+            }
+           &:nth-child(2){
+            .flex{
+                &:nth-child(1){
+                    span{
+                        color: ss-var($colors, neutral, "neutral100");
+                        span{
+                            color: ss-var($colors, neutral, "neutral0");
+                        }
+                    }
+                    
+                }
+                &:nth-child(2){
+                    p{
+                        color: ss-var($colors, neutral, "neutral70");
+                    }
+                }
+            }
+            
+           }
+        }
+       
+        
+    }
+
+    &.section-h-2{
+        .grid{
+            gap: rem(40);
+            .flex{
+                &:nth-child(1){
+                    gap: rem(24);
+                }
+            }
+            .content{
+                h2{
+                    font-size: ss-var($font-sizes, sm, size);
+                    font-weight: ss-var($body-fonts, md, weight);
+                    color: ss-var($colors, neutral, "neutral100");    
+                }
+            }
+            .banner{
+                gap: rem(24);
+
+                img{
+                    border-radius: rem(24);
+                }
+                .banner-content{
+                    .flex{
+                        gap: rem(8);
+                    }
+                    h2{
+                        font-size: ss-var($font-sizes, xxs, desktop);
+                        font-weight: ss-var($body-fonts, md, weight);
+                        color: ss-var($colors, neutral, "neutral100");    
+
+                    }
+                    span{
+                        font-size: ss-var($body-fonts, base-lg, size);
+                        color: ss-var($colors, neutral, "neutral70");    
+                    }
+                }
+            }
+        
+        }
+    }
+
+
+    &.section-h-3{
+            .content{
+                gap: rem(32);
+                .flex{
+                    &:nth-child(1){
+                        gap: rem(24);
+                        h2{
+                            font-weight: ss-var($body-fonts, base-lg, weight);
+                            color: ss-var($colors, neutral, "neutral100"); 
+                        }
+                        p{
+                            color: ss-var($colors, neutral, "neutral100");
+                            font-size: rem(22);
+                        }
+                    }                   
+                }
+               
+            }
+            .features{
+              gap:rem(24);
+            }
+            .flex{
+                gap: rem(24);
+                a{
+                    color: ss-var($colors, neutral, "neutral100");
+                    font-size: ss-var($body-fonts, small-sm, size);
+                }          
+            }
+            
+    }
+
+    &.section-h-4{
+        .marquee{
+            position: relative;
+            .marquee-item{
+                gap: rem(72);
+                position: absolute;
+                &:nth-child(1){
+                    left: 0;
+                }
+                &:nth-child(2){
+                    right: 0;
+                }
+            }
+
+        }
+    }
+
+    &.section-h-5{
+        .grid{
+            gap: rem(56);
+        }
+        p{
+            color: ss-var($colors, neutral, "neutral100");
+            font-size: rem(22);
+        }
+    }
+    
+    &.section-h-6{
+        background: ss-var($colors, neutral, "neutral0");
+
+        h2{
+            color: ss-var($colors, neutral, "neutral100");
+            font-weight: ss-var($body-fonts, md, weight);
+        }
+        h3{
+            font-size: ss-var($font-sizes,xxs,desktop);
+            color: ss-var($colors, neutral, "neutral100");
+            font-weight: ss-var($body-fonts, md, weight);
+
+
+        }
+        span{
+            color: ss-var($colors, neutral, "neutral70");
+            font-size: ss-var($body-fonts,base-lg,size);
+
+        }
+        .grid{
+            gap: rem(40);
+            .awwards{
+                gap: rem(24);
+                .awwards-link{
+                    padding: rem(24) 0;
+                    position: relative;
+                    &::after, &::before {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: rem(800);
+                        height: 100%;
+                        transform: translate(-50%, -50%) scaleY(0); 
+                        background: ss-var($colors, neutral, "neutral100");
+                        transition: transform ease 0.4s;
+                        mix-blend-mode: exclusion;
+                    }
+                    
+                    &::before {
+                        background: ss-var($colors ,neutral,'cream');
+                    }
+                    
+                    &:hover::after,
+                    &:hover::before {
+                        transform: translate(-50%, -50%) scaleY(1); 
+                    }
+                    
+                    &:not(:hover)::after,
+                    &:not(:hover)::before {
+                        transform: translate(-50%, -50%) scaleY(0);
+                    }
+                    
+                    
+                }
+                
+            }
+        }
+
+        
+    }
+    
+    &.section-h-7{
+        .grid{
+            h2{
+                color: ss-var($colors, neutral, "neutral100");
+                font-weight: ss-var($body-fonts, xl, weight);
+                .grey{
+                    color: ss-var($colors, neutral, "neutral40");
+
+                }
+            }
+            .content{
+                gap: rem(24);
+                .content-tagline{
+                    font-size: ss-var($body-fonts, xxl, size);
+                    color: ss-var($colors, neutral, "neutral90");
+                    font-weight: ss-var($body-fonts, base-md, weight);
+                }
+            }
+            
+            .content-links{
+                gap: rem(40);
+                a{
+                    font-size: ss-var($body-fonts, tiny-lg, size);
+                    color: ss-var($colors, neutral, "neutral90");
+                    font-weight: inherit;
+                }
+            }
+        }
+    }
+
+
+}

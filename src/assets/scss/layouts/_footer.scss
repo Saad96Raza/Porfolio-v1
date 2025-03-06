@@ -1,0 +1,83 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* Footer */
+
+
+footer{
+    background: ss-var($colors, neutral, "neutral100");
+    .footer-content{
+        gap: rem(64);
+        .footer-top{
+            gap: rem(64);
+            .footer-logo{
+                gap: rem(8);
+                p{
+                    color: ss-var($colors, neutral, "neutral20");
+                    font-size: ss-var($font-sizes, xxs, desktop); 
+                }
+            }
+            .footer-links-btn{
+                .link-btn{
+                    span{
+                        font-size: ss-var($body-fonts, small-lg, size);  
+                    }
+                }
+                gap: rem(16);
+                span{
+                    color: ss-var($colors, neutral, "neutral60"); 
+                }
+            }
+            
+        }
+        .tagline{
+            p{
+                font-size: ss-var($body-fonts, small-lg, size);
+                color: ss-var($colors, neutral, "neutral60");
+            }
+        }
+    }
+
+    .footer-bottom{
+        .footer-links{
+            .grid{
+               gap: rem(88); 
+            }
+            h5{
+                font-size: ss-var($font-sizes, xxs, desktop); 
+                color: ss-var($colors, neutral, "neutral50");  
+                font-weight:ss-var($body-fonts,base-lg,weight);  
+            }
+            .footer-links-content{
+                gap: rem(16);
+            }
+           
+            a{
+                color: ss-var($colors, neutral, "neutral0");
+                font-size: ss-var($body-fonts, small-lg, size);
+            }
+            input{
+                background:transparent;
+                font-size: ss-var($body-fonts, small-lg, size);
+                font-weight: ss-var($body-fonts, xs, weight);
+                border-bottom: rem(1) solid ss-var($colors, neutral, "neutral50");
+                padding-bottom: rem(20);
+
+                &::placeholder{
+                    color: ss-var($colors, neutral, "neutral50");
+                }
+                
+            }
+            i{
+                position: absolute;
+                right: 0;
+                &::before{
+                    color: ss-var($colors, neutral, "neutral0"); 
+                }
+            }
+        }
+        .subscribe{
+            gap: rem(32);
+        }
+    }
+}

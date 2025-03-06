@@ -1,0 +1,45 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* ========= */
+/* Font Face */
+/* ========= */
+
+/* Thin */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-Thin-100", 100, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-Thin", 100, "normal",ttf);
+
+/* Extralight */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-ExtraLight-200", 200, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-ExtraLight", 200, "normal",ttf);
+
+// /* Light */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-Light-300", 300, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-Light", 300, "normal",ttf);
+
+// /* Regular */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-Regular-400", 400, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-Regular", 400, "normal",ttf);
+
+// /* Medium */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-Medium-500", 500, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-Medium", 500, "normal",ttf);
+
+// /* Semibold */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-SemiBold-600", 600, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-SemiBold", 600, "normal",ttf);
+
+// /* Bold */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-Bold-700", 700, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-Bold", 700, "normal",ttf);
+
+// /* Extrabold */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-ExtraBold-800", 800, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-ExtraBold", 800, "normal",ttf);
+
+// /* Blackbold */
+@include font-face($font-name, "../../fonts/Ralway/Raleway-Black-900", 900, "normal", woff2 woff ttf);
+@include font-face($font-inter, "../../fonts/Inter-Tight/InterTight-Black", 900, "normal",ttf);
+
+
+

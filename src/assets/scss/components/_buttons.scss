@@ -1,0 +1,71 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* Buttons */
+
+
+
+.menu-btn{
+  padding: 0 rem(24);
+  border: rem(1) solid  ss-var($colors,neutral,"neutral100");
+  border-radius: rem(100);
+}
+
+
+.Cta-sm-stroke-footer{
+  span{
+    font-size: ss-var($font-sizes,xxs,desktop);
+  }
+  @include small-btn-cta(
+    rem(8),
+    rem(20),
+    ss-var($colors, neutral, "neutral0"),
+    "",
+    ss-var($colors,neutral,"neutral100"),
+  );
+
+}
+
+.Cta-md-stroke{
+  @include small-btn-cta(
+    rem(24),
+    rem(48),
+  );
+  span{
+    font-size: ss-var($font-sizes,xxs,desktop);
+  }
+}
+
+.Cta-sm {
+  @include small-btn-cta;  
+  span{
+    font-size: ss-var($font-sizes,xxs,desktop);
+  }
+}
+
+.Cta-md {
+  span{
+    font-size: ss-var($font-sizes,xxs,desktop);
+  }
+  @include small-btn-cta(
+    rem(24),
+    rem(48),
+    ss-var($colors,neutral,"neutral0"),
+    ss-var($colors,neutral,"neutral100"),
+    ss-var($colors,neutral,"neutral100"),
+  );
+}
+
+
+.Cta-menu-link {
+  span{
+    font-size: ss-var($font-sizes,xxs,desktop);
+  }
+  @include small-btn-cta(
+    rem(16),
+    rem(28),
+    ss-var($colors,neutral,"neutral0"),
+    '',
+    ss-var($colors,neutral,"neutral100"),
+  );
+}

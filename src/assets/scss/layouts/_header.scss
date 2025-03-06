@@ -1,0 +1,109 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* Header */
+
+section{
+    &.header-section{
+      position: relative;
+    
+    }
+    .header{
+        padding:rem(24) 0;
+        position: relative;
+
+        .menu{
+          gap: rem(16);
+      }
+  
+      .menu-btn{
+          .hamburger {
+              cursor: pointer;
+              -webkit-tap-highlight-color: transparent;
+              transition: transform 600ms;
+              -moz-user-select: none;
+              -webkit-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              
+              &.hamburger-rotate.active {
+                transform: rotate(45deg);
+              }
+              
+              &.hamburger-180.active {
+                transform: rotate(180deg);
+              }
+              
+              .line {
+                fill: none;
+                stroke: ss-var($colors, neutral, 'neutral100');
+                stroke-width: 5.5;
+                stroke-linecap: round;
+                transition: stroke-dasharray 600ms, stroke-dashoffset 600ms;
+              }
+            }
+            
+            .hamburger-4 {
+              .top,
+              .bottom {
+                stroke-dasharray: 40 121;
+              }
+              
+              &.active {
+                .top,
+                .bottom {
+                  stroke-dashoffset: -68px;
+                }
+              }
+            }
+            
+            
+      }
+  
+    }
+    
+    
+}
+
+
+.hamburger-ovelay{
+  height: 0;
+  .nav{
+    gap: rem(32);
+    counter-increment:  COUNTER_INCREMENT;
+    .nav-item{
+      opacity:0;
+      transform: translateY(rem(40));
+      .nav-link{
+        color: ss-var($colors,neutral,'neutral0');
+        font-weight: ss-var($body-fonts,md,weight);
+        text-decoration: none;
+        position: relative;
+        &::after{
+          content:"("counter(COUNTER_INCREMENT)")";
+          counter-increment: COUNTER_INCREMENT;
+          color: ss-var($colors,neutral,'neutral50');
+          font-size: ss-var($font-sizes,xxs,desktop);
+          position: absolute;
+          top: 0;
+          margin-left: rem(16);
+        }
+      }
+      
+    }
+    .Cta-menu-link{
+      a{
+        color: ss-var($colors,neutral,'neutral0');
+      }
+    }
+  }
+  svg{
+    height:100%;
+    width: 100%;
+    path{
+      fill:ss-var($colors,neutral,'neutral100');
+    }
+  }
+}
+
+

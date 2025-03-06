@@ -1,0 +1,122 @@
+@use "functions" as *;
+// ======================== //
+// Prefixes for class names //
+// ======================== //
+$prefix: "ss-";
+// ========= //
+// Font name //
+// ========= //
+$font-name: "Raleway";
+$font-inter: "Inter";
+$font-serif: "sans-serif";
+$font-icon: 'icomoon';
+// ============ //
+// Font weights //
+// ============ //
+$font-weight: (
+    "thin": 100,
+    "extralight": 200,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "extrabold": 800,
+    "blackbold": 900,
+);
+// ====== //
+// Colors //
+// ====== //
+$colors: (
+    // Main colors
+    primary:
+        (
+            "green": #008f70,
+            "blue": #2b777d,
+        ),
+    // Secondary colors
+    secondary:
+        (
+            "lightgreen": #5fbe6e,
+            "darkblue": #2b365a,
+            "lightblue": #5fbebc,
+            "yellow": #bebe5f,
+            "red": #c94242,
+            "purple": #a35fbe,
+        ),
+    // Colors used for gradient
+    gradient: (),
+    // Grayscale/Basic colors
+    neutral:
+        (    
+            "lightgray": #f7f7f7,
+            "cream": #f9f1de,
+            "neutral0": #FFFFFF,
+            "neutral10": #F9FAFB,
+            "neutral20": #E5E7EB,
+            "neutral30": #D1D5DB,
+            "neutral40": #AEB2BA,
+            "neutral50": #6B7280,
+            "neutral60": #4B5563,
+            "neutral70": #374151,
+            "neutral80": #1F2937,
+            "neutral90": #111827,
+            "neutral100": #030712,
+        )
+);
+// ========================== //
+// Device breakpoints (width) //
+// ========================== //
+$breakpoints: (
+    // Mobile
+    "320": 320px,
+    "360": 360px,
+    "375": 375px,
+    "425": 425px,
+    // Tablets
+    "768": 768px,
+    "800": 800px,
+    "900": 900px,
+    "1024": 1024px,
+    // Computers (Laptops/Desktops)
+    "1280": 1280px,
+    "1366": 1366px,
+    "1440": 1440px,
+    "1600": 1600px,
+    "1680": 1680px,
+    "1920": 1920px,
+    "2560": 2560px,
+);
+
+$font-sizes: (
+    "xxl": (desktop:rem(104), mobile: rem(64)),
+    "xl": (desktop:rem(72), mobile:rem(56)),
+    "lg": (desktop:rem(64), mobile:rem(48)),
+    "md": (desktop:rem(56), mobile:rem(40)),
+    "sm": (desktop:rem(40), mobile:rem(32)),
+    "xs": (desktop:rem(32), mobile:rem(24)),
+    "xxs": (desktop:rem(22), mobile:rem(22))
+);
+
+$body-fonts: (
+  "xxl": (size: rem(28), weight: 600), // SemiBold
+  "xl":  (size: rem(28), weight: 700), // Bold
+  "lg":  (size: rem(28), weight: 400), // Regular
+  "md":  (size: rem(20), weight: 600), // SemiBold
+  "sm":  (size: rem(20), weight: 500), // Medium
+  "xs":  (size: rem(20), weight: 400), // Regular
+  "base-lg":  (size: rem(18), weight: 600), // SemiBold
+  "base-md":  (size: rem(18), weight: 500), // Medium
+  "base-sm":  (size: rem(18), weight: 400), // Regular
+  "small-lg": (size: rem(16), weight: 600), // SemiBold
+  "small-md": (size: rem(16), weight: 500), // Medium
+  "small-sm": (size: rem(16), weight: 400), // Regular
+  "tiny-lg":  (size: rem(14), weight: 600), // SemiBold
+  "tiny-md":  (size: rem(14), weight: 500), // Medium
+  "tiny-sm":  (size: rem(14), weight: 400), // Regular
+  "caption":  (size: rem(12), weight: 400) // Regular
+);
+
+
+
+
