@@ -1,9 +1,9 @@
 import React from 'react'
-import {useEffect ,useRef} from 'react'
+import { useEffect,useRef } from 'react'
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
 
-export let lenis = null
+export let lenis = ''
 
 
 const Smooth = () => {
@@ -12,27 +12,23 @@ const Smooth = () => {
 
     useEffect(()=>{
 
-        lenis.current = new Lenis({
-            lerp: 0.01,
-            duration : 2,
-            wheelMultiplier : 1.8,
-            smoothWheel: true,
-            autoResize :true
+
+
+         lenis.current = new Lenis({
+            lerp:0.1,
+            duration:2,
+            easing:	(t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
         })
-
-        const update = (time)=>{
-       
-          lenis.current.raf(time)
-          window.requestAnimationFrame(update)
-
+        
+        const animate = (time)=>{
+            lenis.current.raf(time)
+            requestAnimationFrame(animate)
         }
 
+        animate()
 
-        update()
 
-  
     },[])
-
 
   return (
     <React.Fragment></React.Fragment>

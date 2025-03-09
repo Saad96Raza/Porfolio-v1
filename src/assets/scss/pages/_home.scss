@@ -6,6 +6,12 @@
 /* ======== */
 
 
+.smooth-scroll {
+    width: auto;
+    height: 100vh;
+}
+
+
 section{
     &.section-h-1{
         .grid{
@@ -136,13 +142,7 @@ section{
             position: relative;
             .marquee-item{
                 gap: rem(72);
-                position: absolute;
-                &:nth-child(1){
-                    left: 0;
-                }
-                &:nth-child(2){
-                    right: 0;
-                }
+                padding: 0 rem(72);
             }
 
         }
@@ -189,7 +189,7 @@ section{
                         position: absolute;
                         left: 50%;
                         top: 50%;
-                        width: rem(800);
+                        width: calc(100% - (-10%));
                         height: 100%;
                         transform: translate(-50%, -50%) scaleY(0); 
                         background: ss-var($colors, neutral, "neutral100");

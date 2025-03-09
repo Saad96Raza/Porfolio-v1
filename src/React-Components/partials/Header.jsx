@@ -4,7 +4,7 @@ import GSAP from 'gsap'
 import logo from '../../assets/media/showcasy-logo.png'
 import Cta from '../react-props/Cta'
 
-import { lenis } from '../react-props/Smooth'
+import {lenis} from '../react-props/Smooth'
 
 
 export const Header = () => {
@@ -73,7 +73,7 @@ export const Header = () => {
               <div className='menu-btn sticky top-0 flex items-center z-40' ref={borderStroke}
                 onClick={()=> setHamburger(
                     (hamburger && overlayTimeline.current.reversed()) ? (hamburgerIcon.current.classList.add('active'),overlayTimeline.current.play(),lenis.current.stop(),false) : 
-                    (hamburgerIcon.current.classList.remove('active'),overlayTimeline.current.reverse(), lenis.current.start(),true ),
+                    (hamburgerIcon.current.classList.remove('active'),overlayTimeline.current.reverse(),lenis.current.start(),true ),
                 )
                 }>
                 <svg className="hamburger hamburger-rotate hamburger-4" ref={hamburgerIcon} viewBox="0 0 100 100" width="35">
